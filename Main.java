@@ -1,6 +1,6 @@
 public class Main {
   public static void main(String[] args) {
-
+    caracteresEnUltimaPalabra("Anita lava la tina");
   }
   static void esPalindromo(String word){
     String tmpWord = word.toLowerCase().replaceAll("\\s","");
@@ -22,5 +22,10 @@ public class Main {
       factorial=factorial*i;
     }
     System.out.println(factorial);
+  }
+
+  static void caracteresEnUltimaPalabra(String string){
+    String[] palabrasDelString = string.split("\\s");
+    System.out.println(palabrasDelString[(palabrasDelString.length)-1]);
   }
 }
