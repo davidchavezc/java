@@ -1,25 +1,24 @@
 public class Main {
   public static void main(String[] args) {
-    System.out.println("PRUEBA 1. CHECAR SI UN STRING ES PALINDROMO");
-    String lookForWord = System.console().readLine();
-    String evalWord = lookForWord.toLowerCase().replaceAll("\\s","");
+
+  }
+  static void esPalindromo(String word){
+    String tmpWord = word.toLowerCase().replaceAll("\\s","");
     String reverseWord = "";
-    for(int i = 1; evalWord.length() >= i; i++){
-      reverseWord += evalWord.charAt((evalWord.length())-i);
+    for(int i = 1; tmpWord.length() >= i; i++){
+      reverseWord += tmpWord.charAt((tmpWord.length())-i);
     }
-    if(reverseWord.equals(evalWord)){
+    if(reverseWord.equals(tmpWord)){
       System.out.println("Sí, el string dado es palíndromo.");
     }
     else{
       System.out.println("No, el string no es palíndromo.");
     }
-    System.out.println(lookForWord);
-    System.out.println(reverseWord);
-    System.out.println("PRUEBA 2. FACTORIAL DE UN NUMERO");
-    String evalNum = System.console().readLine();
-    int intEvalNum = Integer.parseInt(evalNum);
+  }
+
+  static void factorial(int num){
     int factorial = 1;
-    for(int i = intEvalNum; i > 0; i--){
+    for(int i = num; i > 0; i--){
       factorial=factorial*i;
     }
     System.out.println(factorial);
